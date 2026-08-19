@@ -1,0 +1,630 @@
+
+.form-control:focus {
+    border-color: #198754 !important;
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25) !important;
+}
+
+.btn-primary {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #157347 !important; 
+    border-color: #146c43 !important;
+    box-shadow: 0 0 0 0.1rem rgba(25, 135, 84, 0.25) !important; 
+}
+
+.rl-hero
+{
+    padding-top: 72px;
+    padding-bottom: 110px;
+}
+
+.container
+{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+div.serif-text {
+    color: #3c992f;
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Adjust between 100 and 900 */
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+h1.PressStart2P-text
+{
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 0.5rem;
+    color:#212529;
+}
+
+p.jost-text {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color:#9b9d9e;
+}
+
+
+div.container1
+{
+    background: #246432da;
+    border-radius: 1rem;
+    box-shadow: 0 24px 48px -20px rgba(27, 31, 35, 0.4);
+    padding: 1.75rem;
+    margin-top: -0.5rem;
+    position: relative;
+    z-index: 5;
+    margin-left: 34px;
+    margin-right: 34px;
+}
+
+.road-container {
+    position: relative;
+    width: 100%;
+    height: 150px; /* Increased height so the bus fits completely */
+    overflow: hidden;/* Adjust height/spacing as needed */
+}
+
+
+
+.road-line {
+    position: absolute;
+    bottom: 10px; /* Moves the dashed line near the bottom */
+    width: 100%;
+    border-bottom: 6px dashed #2e7d32;
+}
+
+.moving-bus {
+    position: absolute;
+    bottom: 14px; /* Positions the bus sitting right on top of the line */
+    left: -600px; /* Starts slightly off-screen to the left (adjust based on bus width) */
+    animation: driveBus 14s linear infinite; /* Adjust '8s' to make it faster or slower */
+}
+
+@media (max-width: 768px) {
+    .moving-bus {
+        width: 300px; /* Makes the bus much smaller on mobile screens */
+        bottom: 14px; /* Slightly adjust bottom alignment for the smaller wheel size */
+    }
+}
+
+@keyframes driveBus {
+    100% { right: -150px; }
+    0%   { left: 100%; }
+}
+
+.booking-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-end;
+}   
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 180px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+/* Base Input & Select Styling */
+.custom-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-family: inherit;
+    color: #2d3748;
+    background-color: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.custom-input:hover {
+    border-color: #a0aec0;
+}
+
+.custom-input:focus {
+    border-color: #2e7d32; 
+    box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.15);
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #212529;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #212529bb;
+}
+
+/* Section Container */
+.popular-routes-section {
+    margin: 48px 34px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout */
+.routes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Card Container */
+.route-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.route-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    border-color: #2e7d32;
+}
+
+/* Text & Labels */
+.route-cities {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a202c;
+}
+
+.route-cities .arrow {
+    color: #2e7d32;
+    margin: 0 6px;
+}
+
+.route-price {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-top: 6px;
+}
+
+.price-tag {
+    font-weight: 700;
+    font-family: monospace;
+    color: #2e7d32;
+    font-size: 1rem;
+}
+
+/* View Buses Button */
+.view-btn {
+    margin-top: 16px;
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2e7d32;
+    background-color: transparent;
+    border: 2px solid #2e7d32;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.view-btn:hover {
+    background-color: #2e7d32;
+    color: #ffffff;
+}
+
+
+/* Footer Styles */
+.rl-footer {
+    background-color: #212529; 
+    color: #a0aec0; 
+    padding: 24px 0;
+    margin-top: 60px;
+    border-top: 3px solid #2e7d32; 
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 34px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #3c992f; 
+    text-decoration: underline;
+} 
+
+/* ----------------------------------------------- */
+/* result.html */
+
+.my-booking-link {
+    color: #9b9d9e !important;
+    transition: color 0.2s ease-in-out;
+}
+
+.my-booking-link:hover {
+    color: #b9bcbd !important; 
+}
+
+.rl-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom:24px;
+}
+
+.step {
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #f8f9fa; 
+    color: #6c757d; 
+    border: 1px solid #dee2e6;
+}
+
+.step.done {
+    background-color: #198754; 
+    color: #ffffff;
+    border-color: #198754;
+}
+
+.step.active {
+    background-color:#212529; 
+    color: #ffffff; 
+    border-color: #212529;
+}
+
+.text-steel {
+    color: #6c757d;
+    font-size: 15px; 
+    font-weight: 500;
+}
+/* ----------------seat-selection........ */
+
+.bus-header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.bus-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #212529;
+    margin: 0;
+}
+
+.bus-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #495057;
+    background-color: #f1f3f5;
+    border: 1px solid #ced4da;
+    padding: 4px 10px;
+    border-radius: 50px;
+}
+
+.text-steel {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+.btn-asphalt {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 16px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #343a40;
+    background-color: transparent;
+    border: 1px solid #6c757d;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-asphalt:hover {
+    background-color: #2f3439;
+    color: #ffffff;
+}
+
+:root {
+    --seat-available-bg: #f8f9fa;
+    --seat-available-border: #ced4da;
+    --seat-available-color: #212529;
+
+    --seat-selected-bg: #198754;
+    --seat-selected-border: #198754;
+    --seat-selected-color: #ffffff;
+
+    --seat-sold-bg: #e9ecef;
+    --seat-sold-border: #dee2e6;
+    --seat-sold-color: #adb5bd;
+}
+
+/* Bus Floor Outer Container */
+.bus-floor {
+    max-width: 320px;
+    background-color: #ffffff;
+    border: 2px solid #e9ecef;
+    border-radius: 24px;
+    padding: 20px;
+}
+.seat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 44px) 24px repeat(2, 44px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.seat {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1.5px solid var(--seat-available-border);
+    background-color: var(--seat-available-bg);
+    color: var(--seat-available-color);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    padding: 0;
+}
+
+.seat:hover:not(:disabled):not(.sold) {
+    border-color: #198754;
+    color: #198754;
+    background-color: #1987541e;
+}
+
+.seat.selected {
+    background-color: var(--seat-selected-bg);
+    border-color: var(--seat-selected-border);
+    color: var(--seat-selected-color);
+    box-shadow: 0 4px 10px rgba(25, 135, 84, 0.3);
+}
+
+.seat.sold, 
+.seat:disabled {
+    background-color: var(--seat-sold-bg);
+    border-color: var(--seat-sold-border);
+    color: var(--seat-sold-color);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.seat-aisle {
+    grid-column: span 1;
+}
+
+.swatch {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.swatch.available {
+    background-color: var(--seat-available-bg);
+    border: 1px solid var(--seat-available-border);
+}
+
+.swatch.selected {
+    background-color: #1a8754;
+}
+
+.swatch.sold {
+    background-color: var(--seat-sold-bg);
+    border: 1px solid var(--seat-sold-border);
+}
+.min-h-35 {
+    min-height: 35px;
+}
+
+#totalFare
+{
+    color:#1a8754 !important;
+}
+
+#continueBtn
+{
+    background-color: #1a8754  !important;
+    border-color: #1a8754  !important;
+    color:white !important;
+}
+
+.bus-card {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.text-steel {
+    color: #6c757d;
+}
+
+.mono {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.bus-operator {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #212529;
+}
+
+.bus-type-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.35em 0.65em;
+    color: #198754;
+    background-color: #e8f5e9;
+    border: 1px solid #198754;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.btn-outline-asphalt {
+    color: #dc3545; /* Red for cancel */
+    border: 1px solid #dc3545;
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-asphalt:hover {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.btn-amber {
+    background-color: #1a8754; 
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+    text-decoration: none;
+}
+
+.btn-amber:hover {
+    background-color: #157347;
+    color: #ffffff;
+}
+
+.ticket-dashed-line {
+    border-right: 2px dashed #dee2e6 !important;
+}
+.text-steel {
+    color: #6c757d; 
+    font-size: 1.1rem; 
+    font-weight: 400;
+}
+
+@media (min-width: 768px) {
+    .ticket-dashed-line {
+        border-right: 2px dashed #dee2e6 !important;
+    }
+}
+@media (max-width: 767px) {
+    .ticket-dashed-line {
+        border-bottom: 2px dashed #dee2e6 !important;
+    }
+}
+
+.btn-outline-asphalt {
+    color: #6c757d;
+    background-color: transparent;
+    border: 1px solid #6c757d;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-asphalt:hover {
+    color: #ffffff;
+    background-color: #6c757d;
+}
+
+.btn-teal {
+    color: #198754;
+    background-color: transparent;
+    border: 1px solid #198754;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-teal:hover {
+    color: #ffffff;
+    background-color: #198754;
+}
+
+/* Book Another Trip Button */
+.btn-amber {
+    color: #ffffff;
+    background-color: #198754;
+    border: 1px solid #198754;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-amber:hover {
+    color: #ffffff;
+    background-color: #157347;
+    border-color: #157347;
+}
+
+/* Hide these buttons when the user prints the page */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}
